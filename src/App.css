@@ -1,4 +1,4 @@
-.App {
+/* .App {
   width: 300px;
   height: 200px;
 }
@@ -13,4 +13,56 @@
 
 .Field label {
   display: block;
+} */
+
+.App {
+  padding: 16px;
+  width: 400px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;  
+  background-color: #d5f4ae;
+  color: rgb(43, 29, 61);
+}
+
+label {
+  margin-right: 8px;
+}
+
+.Field {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  margin-bottom: 16px;
+}
+
+textarea {
+  height: 100px;
+  border-radius: 1%; 
+  padding: 2%;
+  border-color: rgb(60, 26, 92);
+}
+
+input [type="range" i] {
+color: blueviolet;
+}
+
+button {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(66, 26, 57); 
+  background-color: #a3cc70; 
+  border-color: #a3cc70;
 }

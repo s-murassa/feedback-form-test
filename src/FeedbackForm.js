@@ -7,7 +7,9 @@ const FeedbackForm = ({onSubmit}) => {
     
     const isDisabled = Number(score) < 5 && comment.length <= 10;
 
-    const textAreaPlaceholder = isDisabled ? "Please provide the comment explaining why the experience was not good. Minimum length is 10 characters" : "Optional Feedback";
+    const textAreaPlaceholder = isDisabled
+        ? "Please provide the comment explaining why the experience was not good. Minimum length is 10 characters"
+        : "Optional Feedback";
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,8 +22,9 @@ const FeedbackForm = ({onSubmit}) => {
                 <fieldset>
                     <h2>Feedback Form</h2>
                     <div className= "Field">
-                        <label>Score: {score} </label>
+                        <label htmlFor="score">Score: {score} </label>
                         <input
+                            id="score"
                             value={score}
                             onChange={e => { 
                                 setScore(e.target.value);
@@ -32,8 +35,9 @@ const FeedbackForm = ({onSubmit}) => {
                         />
                     </div>
                     <div className= "Field">
-                        <label>Comment: </label>
+                        <label htmlFor="comment">Comments: </label>
                         <textarea
+                            id="comment"
                             placeholder={textAreaPlaceholder}
                             name="comment"
                             value={comment}
@@ -42,6 +46,9 @@ const FeedbackForm = ({onSubmit}) => {
                             }}
                         />
                     </div>
+                    <button type="submit" disabled={isDisabled}>
+                        Submit
+                    </button>
                 </fieldset>
             </form>
         </div>
